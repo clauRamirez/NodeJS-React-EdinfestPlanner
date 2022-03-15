@@ -1,0 +1,15 @@
+.hover-heart > .fa.far.fa-heart {
+  text-shadow: 2px 3px 13px rgb(134 94 101);
+}
+
+.hover-heart.fa.far.fa-heart::after {
+  color: rgb(192, 24, 178);
+}
+
+.hover-heart {
+  height: 2px;
+  width: 2px;
+  position: relative;
+  top: -85px;
+  left: 270px;
+}
