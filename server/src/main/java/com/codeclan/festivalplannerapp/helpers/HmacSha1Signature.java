@@ -43,11 +43,10 @@ public class HmacSha1Signature {
         return toHexString(mac.doFinal(data.getBytes()));
     }
 
-    // this below is the method we can play around with
     public static String getSignedData(String apiKey, String secretKey, String search) throws Exception {
-        // this two constants below can change
-        String SIZE = "50"; // number of events per request to Edinburgh Festivals API
-        String YEAR = "2021";
+//      extract this logic outside of this class. different concerns
+        final String SIZE = "50";
+        final String YEAR = "2021";
 
         String query = "/events?" + search + "&size=" + SIZE + "&year=" + YEAR +"&key=" + apiKey;
         String signature = calculateRFC2104HMAC(query, secretKey);

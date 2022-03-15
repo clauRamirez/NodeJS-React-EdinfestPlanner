@@ -33,47 +33,21 @@ public class FestivalController {
 
     @GetMapping("/festivals")
     public ResponseEntity<Object> jazz(@RequestParam(value = "id", required = false) String id) throws Exception {
-        /* ADDED: CHECK IF IN DATABASE ALREADY
+//      handle logic here to check if date older than certain time i.e. 12h/24h
         Festival found = festivalRepository.findById(id).orElse(null);
         if (found != null ){
-            // if found, return it from database
             return new ResponseEntity<>(found.getJsonEventObject(), HttpStatus.OK);
         }
-         */
 
-
-        // if not found, we will get it from API, upload to our database and then send it back to user
-        // calling the method we got from the Internet for the algorithm
-        // we pass the api keys here otherwise it wasn't working 🤷
-//        String url = HmacSha1Signature.getSignedData(apiKey, secretKey, "festival=" + id);
         String url = HmacSha1Signature.getSignedData(apiKey, secretKey, "festival=" + id);
 
-
-        // This below is like calling JavaScript's fetch!
-        // we pass the url signed up with the algorithm
-        // second parameter is how we want the data (so no String lol)
+//      RestTemplate is deprecated. Refactored to a more modern approach
         RestTemplate restTemplate = new RestTemplate();
         Object[] response = restTemplate.getForObject(url, Object[].class);
 
-        /* ADDED: RETURN ERROR IF NOTHING SHOWN
-        // we check that the response is not empty (we need to check it on the Festival model)
-        // if it's empty, we want to throw an Exception not a valid Response Entity.
-        if (response.length <= 0)  {
-            throw new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "entity not found");
-        }
-         */
-
-        // Map response to Java object
-        // now we create a Festival object. takes two parameters:
-        // 1. Name of festival (fringe, jazz, book, etc), works as unique id
-        // 2. The whole response we get from festival API as an object
         Festival newFestival = new Festival(id, response);
-
-        // we save it in our database
         festivalRepository.save(newFestival);
 
-        // we send the response back to the frontend
         return new ResponseEntity<>(newFestival.getJsonEventObject(), HttpStatus.OK);
     }
 }
