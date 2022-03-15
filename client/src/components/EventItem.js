@@ -44,30 +44,30 @@ const EventItem = ({ event, onEventClick }) => {
     let arrayOfWords = string.slice(0, maxLength).trim();
 
     return arrayOfWords + "...";
-  }
+  };
 
   return (
     <>
-      <div className="event-wrapper">
+      <div className='event-wrapper'>
         <img
-          className="rounded shadow"
-          width="320px"
-          height="180px"
+          className='rounded shadow'
+          width='320px'
+          height='180px'
           src={image.url}
           onClick={() => toggleHidden()}
         />
 
-        <div className="event-wrapper-title-container">
-          <div className="hover-heart" onClick={handleClick}>
+        <div className='event-wrapper-title-container'>
+          <div className='hover-heart' onClick={handleClick}>
             <i
-              className="fa far fa-heart"
+              className='fa far fa-heart'
               style={{
                 fontSize: "1.75em",
                 color: event.favourited ? "rgb(192, 24, 178)" : "white",
               }}
             />
           </div>
-          <span className="event-wrapper-title" onClick={() => toggleHidden()}>
+          <span className='event-wrapper-title' onClick={() => toggleHidden()}>
             {shortenTitle(event.title, 18)}
           </span>
           {/* <h2>{event.year}</h2> */}

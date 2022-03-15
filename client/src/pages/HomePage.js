@@ -8,72 +8,72 @@ import InternationalImage from "../static/images/international.jpg";
 
 const HomePage = () => {
   return (
-    <main className="home-page-container">
+    <main className='home-page-container'>
       <h1>Edinfest planner</h1>
-      <section className="home-page-gallery">
-        <div className="home-event-wrapper">
-          <a href="/festivals/art">
+      <section className='home-page-gallery'>
+        <div className='home-event-wrapper'>
+          <a href='/festivals/art'>
             <img
-              className="rounded shadow"
-              width="320px"
-              height="180px"
+              className='rounded shadow'
+              width='320px'
+              height='180px'
               src={ArtImage}
             />
             <span>ART</span>
           </a>
         </div>
-        <div className="home-event-wrapper">
-          <a href="/festivals/book">
+        <div className='home-event-wrapper'>
+          <a href='/festivals/book'>
             <img
-              className="rounded shadow"
-              width="320px"
-              height="180px"
+              className='rounded shadow'
+              width='320px'
+              height='180px'
               src={BookImage}
             />
             <span>BOOK</span>
           </a>
         </div>
-        <div className="home-event-wrapper">
-          <a href="/festivals/imaginate">
+        <div className='home-event-wrapper'>
+          <a href='/festivals/imaginate'>
             <img
-              className="rounded shadow"
-              width="320px"
-              height="180px"
+              className='rounded shadow'
+              width='320px'
+              height='180px'
               src={ImaginationImage}
             />
             <span>IMAGINATE</span>
           </a>
         </div>
       </section>
-      <section className="home-page-gallery">
-        <div className="home-event-wrapper">
-          <a href="/festivals/jazz">
+      <section className='home-page-gallery'>
+        <div className='home-event-wrapper'>
+          <a href='/festivals/jazz'>
             <img
-              className="rounded shadow"
-              width="320px"
-              height="180px"
+              className='rounded shadow'
+              width='320px'
+              height='180px'
               src={JazzImage}
             />
             <span>JAZZ</span>
           </a>
         </div>
-        <div className="home-event-wrapper">
-          <a href="/festivals/storytelling">
+        <div className='home-event-wrapper'>
+          <a href='/festivals/storytelling'>
             <img
-              className="rounded shadow"
-              width="320px"
-              height="180px"
+              className='rounded shadow'
+              width='320px'
+              height='180px'
               src={StorytellingImage}
             />
             <span>STORYTELLING</span>
           </a>
         </div>
-        <div className="home-event-wrapper">
-          <a href="/festivals/international">
+        <div className='home-event-wrapper'>
+          <a href='/festivals/international'>
             <img
-              className="rounded shadow"
-              width="320px"
-              height="180px"
+              className='rounded shadow'
+              width='320px'
+              height='180px'
               src={InternationalImage}
             />
             <span>INTERNATIONAL</span>

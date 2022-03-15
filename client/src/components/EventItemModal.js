@@ -33,10 +33,10 @@ const EventItemModal = ({
 
   return (
     <div
-      className="modal-container"
+      className='modal-container'
       onClick={(event) => onClickOutsideCloseModal(event)}
     >
-      <Modal.Dialog className="modal-wrapper">
+      <Modal.Dialog className='modal-wrapper'>
         <Modal.Header>
           <Modal.Title>{currentEvent.title}</Modal.Title>
           <div style={{ width: "36px", height: "36px" }}>
@@ -74,8 +74,8 @@ const EventItemModal = ({
         <Modal.Footer>
           <a
             href={currentEvent.website}
-            target="_blank"
-            rel="noopener noreferrer"
+            target='_blank'
+            rel='noopener noreferrer'
           >
             <i>Go to official website.</i>
           </a>

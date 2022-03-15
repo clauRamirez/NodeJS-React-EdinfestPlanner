@@ -40,7 +40,7 @@ const EventList = ({ context, onEventClick, search = null }) => {
     }
   }, [eventListNodes]);
 
-  return <section className="event-gallery">{eventListNodes}</section>;
+  return <section className='event-gallery'>{eventListNodes}</section>;
 };
 
 export default EventList;

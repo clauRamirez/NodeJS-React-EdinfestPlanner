@@ -18,8 +18,8 @@ const RouterContainer = () => {
   });
 
   useEffect(() => {
-    localStorage.setItem("favourites", JSON.stringify(favouritesData))
-  }, [favouritesData])
+    localStorage.setItem("favourites", JSON.stringify(favouritesData));
+  }, [favouritesData]);
 
   const onEventClick = (newFavourite) => {
     const favouritesDataCodes = favouritesData.map(
@@ -39,13 +39,20 @@ const RouterContainer = () => {
 
   return (
     <>
-      <main style={{ paddingBottom: "8vh", paddingLeft: "8vw", flexGrow: "1", minHeight: "100%"}}>
+      <main
+        style={{
+          paddingBottom: "8vh",
+          paddingLeft: "8vw",
+          flexGrow: "1",
+          minHeight: "100%",
+        }}
+      >
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route exact path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
 
           <Route
-            path="/calendar"
+            path='/calendar'
             element={
               <FavouritesDataContext.Provider
                 value={{ favouritesData, setFavouritesData }}
@@ -55,7 +62,7 @@ const RouterContainer = () => {
             }
           />
           <Route
-            path="/favourites"
+            path='/favourites'
             element={
               <FestivalDataContext.Provider
                 value={{ festivalData, setFestivalData }}
@@ -70,7 +77,7 @@ const RouterContainer = () => {
           />
           <Route
             exact
-            path="/festivals/:festival"
+            path='/festivals/:festival'
             element={
               <FestivalDataContext.Provider
                 value={{ festivalData, setFestivalData }}
@@ -87,7 +94,7 @@ const RouterContainer = () => {
             }
           />
 
-          <Route path="/form" element={<FormPage />} />
+          <Route path='/form' element={<FormPage />} />
         </Routes>
       </main>
     </>

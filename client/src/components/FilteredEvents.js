@@ -5,18 +5,18 @@ const FilteredEvents = ({ setSearch }) => {
     setSearch(event.target.value);
   };
   return (
-    <div className="search-body">
+    <div className='search-body'>
       {/* Source: https://freefrontend.com/css-search-boxes/ */}
-      <div className="search-container">
+      <div className='search-container'>
         <input
-          className="search-input"
-          type="text"
-          name="search"
+          className='search-input'
+          type='text'
+          name='search'
           onChange={handleChange}
-          placeholder="Search for your event ..."
+          placeholder='Search for your event ...'
         />
-        <a href="#" className="search-btn">
-          <i className="fas fa-search"></i>
+        <a href='#' className='search-btn'>
+          <i className='fas fa-search'></i>
         </a>
       </div>
     </div>
