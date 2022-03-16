@@ -1,0 +1,37 @@
+.event-gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.event-wrapper {
+  position: relative;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.event-wrapper:hover {
+  opacity: 0.8;
+}
+.event-wrapper-title-container {
+  position: absolute;
+  width: 100%;
+  top: 54%;
+  text-align: center;
+  /* opacity: 0.8; */
+}
+.event-wrapper-title {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: snow;
+  padding: 0.5vh 1.2vh;
+  font-weight: bolder;
+  height: 66px;
+  width: 300px;
+  margin: 0 auto;
+  font-family: "Bungee Shade";
+  letter-spacing: 2px;
+  font-size: larger;
+  color: var(--main-font-color);
+  opacity: 0.8;
+  align-items: center;
+}

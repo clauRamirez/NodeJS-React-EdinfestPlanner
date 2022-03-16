@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Stack from "react-bootstrap/Stack";
-import SocialMediaIcon from "../components/SocialMediaIcon";
+import SocialMediaIcon from "../components/socialMedia/SocialMediaIcon";
 
-const SocialMediaContainer = () => {
+const FooterContainer = () => {
   const icons = [
     {
       icon: "fa fa-brands fa-facebook-f",
@@ -42,21 +42,21 @@ const SocialMediaContainer = () => {
     >
       <Stack>
         <Stack
-          id="social-media-wrapper"
+          id='social-media-wrapper'
           style={{ justifyContent: "center" }}
-          direction="horizontal"
+          direction='horizontal'
           gap={3}
         >
           {iconNodes}
         </Stack>
-        <i className="footer-text">Follow us on social media</i>
+        <i className='footer-text'>Follow us on social media</i>
         <hr />
-        <p className="footer-text">
+        <p className='footer-text'>
           2022 &copy; Overconfident Rats{" "}
           <a
-            href="https://www.pret.co.uk/en-GB/pretcoffeesub"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://www.pret.co.uk/en-GB/pretcoffeesub'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             ☕️
           </a>
@@ -66,4 +66,4 @@ const SocialMediaContainer = () => {
   );
 };
 
-export default SocialMediaContainer;
+export default FooterContainer;

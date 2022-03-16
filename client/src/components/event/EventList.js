@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import EventItem from "./EventItem";
-import { allowScroll } from "../helpers/scrollBehaviours";
+import EventListItem from "./EventListItem";
+import { allowScroll } from "../../helpers/scrollBehaviours";
 
 const EventList = ({ context, onEventClick, search = null }) => {
   const currentPath = useLocation().pathname;
@@ -10,7 +10,7 @@ const EventList = ({ context, onEventClick, search = null }) => {
   if (search === null) {
     eventListNodes = context.map((event, index) => {
       return (
-        <EventItem
+        <EventListItem
           key={`${currentPath}-${index}`}
           event={event}
           onEventClick={onEventClick}
@@ -21,7 +21,7 @@ const EventList = ({ context, onEventClick, search = null }) => {
     eventListNodes = context.map((event, index) => {
       if (event.title?.toLowerCase().includes(search?.toLowerCase()))
         return (
-          <EventItem
+          <EventListItem
             key={`${currentPath}-${index}`}
             event={event}
             onEventClick={onEventClick}
@@ -40,7 +40,7 @@ const EventList = ({ context, onEventClick, search = null }) => {
     }
   }, [eventListNodes]);
 
-  return <section className="event-gallery">{eventListNodes}</section>;
+  return <section className='event-gallery'>{eventListNodes}</section>;
 };
 
 export default EventList;

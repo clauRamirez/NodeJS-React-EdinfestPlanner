@@ -3,11 +3,6 @@ package com.codeclan.festivalplannerapp.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- * This is a POJO (Plain Old Java Object) to model the festivals
- * we get from Edinburgh Festival City API.
- */
-
 @Document("festivals")
 public class Festival {
 

@@ -1,6 +1,6 @@
 /**
  * This functions change behaviour of scrolling.
- * 
+ *
  * From: https://linuxhint.com/disable-scrolling-javascript/
  */
 

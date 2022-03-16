@@ -1,13 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-import MainContainer from './containers/MainContainer';
+import "./App.css";
+import DocumentContainer from "./containers/DocumentContainer";
 
 function App() {
-  return (
-      <>
-        <MainContainer/>
-      </>
-    );
+  return <DocumentContainer />;
 }
 
 export default App;
