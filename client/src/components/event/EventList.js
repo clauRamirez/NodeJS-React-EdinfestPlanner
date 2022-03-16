@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import EventItem from "./EventItem";
-import { allowScroll } from "../helpers/scrollBehaviours";
+import EventItem from "./EventListItem";
+import { allowScroll } from "../../helpers/scrollBehaviours";
 
 const EventList = ({ context, onEventClick, search = null }) => {
   const currentPath = useLocation().pathname;

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Stack from "react-bootstrap/Stack";
-import SocialMediaIcon from "../components/SocialMediaIcon";
+import SocialMediaIcon from "../components/socialMedia/SocialMediaIcon";
 
 const SocialMediaContainer = () => {
   const icons = [

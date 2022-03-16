@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
-import "../static/styles/calendar.css";
 import moment from "moment";
-import FavouritesDataContext from "../context/FavouritesDataContext";
+import FavouritesDataContext from "../../context/FavouritesDataContext";
 
 const CalendarComponent = () => {
   const localizer = momentLocalizer(moment);

@@ -1,7 +1,7 @@
 import React from "react";
 import NavBarContainer from "./NavBarContainer";
 import RouterContainer from "./RouterContainer";
-import SocialMediaContainer from "./SocialMediaContainer";
+import SocialMediaContainer from "./FooterContainer";
 import { BrowserRouter } from "react-router-dom";
 
 const MainContainer = () => {

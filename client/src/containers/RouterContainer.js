@@ -4,12 +4,15 @@ import AboutPage from "../pages/AboutPage";
 import CalendarPage from "../pages/CalendarPage";
 import FavouritesPage from "../pages/FavouritesPage";
 import FestivalPage from "../pages/FestivalPage";
-import FormPage from "../pages/FormPage";
+import FormPage from "../pages/LoginPage";
 import HomePage from "../pages/HomePage";
 import FestivalDataContext from "../context/FestivalDataContext";
 import FavouritesDataContext from "../context/FavouritesDataContext";
 
 const RouterContainer = () => {
+
+  // separate Routes logic from State logic
+
   const [festivalData, setFestivalData] = useState([]);
   const [favouritesData, setFavouritesData] = useState(() => {
     const storage = localStorage.getItem("favourites");
@@ -61,6 +64,7 @@ const RouterContainer = () => {
               </FavouritesDataContext.Provider>
             }
           />
+
           <Route
             path='/favourites'
             element={
@@ -75,6 +79,7 @@ const RouterContainer = () => {
               </FestivalDataContext.Provider>
             }
           />
+
           <Route
             exact
             path='/festivals/:festival'

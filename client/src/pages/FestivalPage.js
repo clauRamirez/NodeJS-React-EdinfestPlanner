@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import EventList from "../components/EventList";
+import EventList from "../components/event/EventList";
 import FestivalDataContext from "../context/FestivalDataContext";
 import FavouritesDataContext from "../context/FavouritesDataContext";
-import FilteredEvents from "../components/FilteredEvents";
+import FilteredEvents from "../components/searchBar/SearchBar";
 
 const FestivalPage = ({ onEventClick }) => {
   const { festivalData, setFestivalData } = useContext(FestivalDataContext);

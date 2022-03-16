@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import EventItemModal from "./EventItemModal";
-import getImageFromEvent from "../helpers/getImageFromEvent";
-import { preventScroll, allowScroll } from "../helpers/scrollBehaviours";
+import EventItemModal from "./EventListItemModal";
+import getImageFromEvent from "../../helpers/getImageFromEvent";
+import { preventScroll, allowScroll } from "../../helpers/scrollBehaviours";
 
 const EventItem = ({ event, onEventClick }) => {
   // pop-up modal visibility state

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import FavouritesDataContext from "../context/FavouritesDataContext";
-import EventList from "../components/EventList";
+import EventList from "../components/event/EventList";
 
 const FavouritesPage = ({ onEventClick }) => {
   const { favouritesData, setFavouritesData } = useContext(
