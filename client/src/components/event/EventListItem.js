@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import EventItemModal from "./EventListItemModal";
+import React, { useState } from "react";
+import EventListItemModal from "./EventListItemModal";
 import getImageFromEvent from "../../helpers/getImageFromEvent";
 import { preventScroll, allowScroll } from "../../helpers/scrollBehaviours";
 
-const EventItem = ({ event, onEventClick }) => {
+const EventListItem = ({ event, onEventClick }) => {
   // pop-up modal visibility state
   const [shows, setShows] = useState(false);
 
@@ -74,7 +74,7 @@ const EventItem = ({ event, onEventClick }) => {
         </div>
       </div>
       {shows ? (
-        <EventItemModal
+        <EventListItemModal
           currentEvent={event}
           toggleHidden={toggleHidden}
           onClickOutsideCloseModal={onClickOutsideCloseModal}
@@ -84,4 +84,4 @@ const EventItem = ({ event, onEventClick }) => {
   );
 };
 
-export default EventItem;
+export default EventListItem;

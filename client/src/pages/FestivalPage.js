@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import EventList from "../components/event/EventList";
 import FestivalDataContext from "../context/FestivalDataContext";
 import FavouritesDataContext from "../context/FavouritesDataContext";
-import FilteredEvents from "../components/searchBar/SearchBar";
+import SearchBar from "../components/searchBar/SearchBar";
 
 const FestivalPage = ({ onEventClick }) => {
   const { festivalData, setFestivalData } = useContext(FestivalDataContext);
@@ -11,15 +11,13 @@ const FestivalPage = ({ onEventClick }) => {
     FavouritesDataContext
   );
 
-  // state
   const [finalFestivalData, setFinalFestivalData] = useState([]);
 
-  // react-router hooks
-  const { festival } = useParams(); // gets 'festival' parameter from '/festival/:festival' route
+  const { festival } = useParams();
 
   const [search, setSearch] = useState("");
 
-  const fetchData = () => {
+  const fetchFestivals = () => {
     fetch(`http://localhost:8080/festivals?id=${festival}`)
       .then((response) => response.json())
       .then((data) => setFestivalData(data))
@@ -27,7 +25,7 @@ const FestivalPage = ({ onEventClick }) => {
   };
 
   useEffect(() => {
-    fetchData();
+    fetchFestivals();
   }, [festival]);
 
   useEffect(() => {
@@ -58,7 +56,7 @@ const FestivalPage = ({ onEventClick }) => {
   return (
     <>
       <h2>{festival[0].toUpperCase() + festival.substring(1)} festival</h2>
-      <FilteredEvents setSearch={setSearch} />
+      <SearchBar setSearch={setSearch} />
       <EventList
         context={
           finalFestivalData.length > 0 ? finalFestivalData : festivalData

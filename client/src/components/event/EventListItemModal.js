@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const EventItemModal = ({
+const EventListItemModal = ({
   currentEvent,
   toggleHidden,
   onClickOutsideCloseModal,
@@ -85,4 +85,4 @@ const EventItemModal = ({
   );
 };
 
-export default EventItemModal;
+export default EventListItemModal;

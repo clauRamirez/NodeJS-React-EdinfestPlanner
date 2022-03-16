@@ -1,6 +1,6 @@
 import React from "react";
 
-const FilteredEvents = ({ setSearch }) => {
+const SearchBar = ({ setSearch }) => {
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
@@ -23,4 +23,4 @@ const FilteredEvents = ({ setSearch }) => {
   );
 };
 
-export default FilteredEvents;
+export default SearchBar;
