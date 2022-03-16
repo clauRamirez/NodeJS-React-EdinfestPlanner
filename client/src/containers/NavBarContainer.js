@@ -10,9 +10,6 @@ const NavBarContainer = () => {
     <SideNav
       className=''
       style={{ position: "fixed" }}
-      onSelect={(selected) => {
-        // Add your code here
-      }}
     >
       <SideNav.Toggle />
       <SideNav.Nav defaultSelected={currentPath}>

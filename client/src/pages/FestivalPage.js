@@ -7,7 +7,7 @@ import SearchBar from "../components/searchBar/SearchBar";
 
 const FestivalPage = ({ onEventClick }) => {
   const { festivalData, setFestivalData } = useContext(FestivalDataContext);
-  const { favouritesData, setFavouritesData } = useContext(
+  const { favouritesData } = useContext(
     FavouritesDataContext
   );
 

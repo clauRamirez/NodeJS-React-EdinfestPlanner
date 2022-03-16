@@ -3,7 +3,7 @@ import FavouritesDataContext from "../context/FavouritesDataContext";
 import EventList from "../components/event/EventList";
 
 const FavouritesPage = ({ onEventClick }) => {
-  const { favouritesData, setFavouritesData } = useContext(
+  const { favouritesData } = useContext(
     FavouritesDataContext
   );
 

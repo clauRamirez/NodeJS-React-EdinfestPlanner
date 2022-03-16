@@ -2,3 +2,4 @@
 /cypress
 *.test.js
 registerServiceWorker.js
+reportWebVitals.js
