@@ -35,14 +35,14 @@
   font-weight: 400;
 }
 
-.btn-custom {
-  color: var(--icons-color) !important;
-  background-color: var(--second-color) !important;
+.submit-custom > .btn.btn-custom {
+  color: var(--icons-color);
+  background-color: var(--second-color);
   max-width: fit-content;
 }
 
-.btn-custom:hover {
-  background-color: var(--hover-color) !important;
+.submit-custom > .btn.btn-custom:hover {
+  background-color: var(--hover-color);
 }
 
 .forgot-password,

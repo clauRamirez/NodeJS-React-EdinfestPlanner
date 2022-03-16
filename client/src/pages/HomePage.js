@@ -14,7 +14,7 @@ const HomePage = () => {
         <div className='home-event-wrapper'>
           <a href='/festivals/art'>
             <img
-              className='rounded shadow'
+              className='rounded'
               width='320px'
               height='180px'
               src={ArtImage}
@@ -25,7 +25,7 @@ const HomePage = () => {
         <div className='home-event-wrapper'>
           <a href='/festivals/book'>
             <img
-              className='rounded shadow'
+              className='rounded'
               width='320px'
               height='180px'
               src={BookImage}
@@ -36,7 +36,7 @@ const HomePage = () => {
         <div className='home-event-wrapper'>
           <a href='/festivals/imaginate'>
             <img
-              className='rounded shadow'
+              className='rounded'
               width='320px'
               height='180px'
               src={ImaginationImage}
@@ -49,7 +49,7 @@ const HomePage = () => {
         <div className='home-event-wrapper'>
           <a href='/festivals/jazz'>
             <img
-              className='rounded shadow'
+              className='rounded'
               width='320px'
               height='180px'
               src={JazzImage}
@@ -60,7 +60,7 @@ const HomePage = () => {
         <div className='home-event-wrapper'>
           <a href='/festivals/storytelling'>
             <img
-              className='rounded shadow'
+              className='rounded'
               width='320px'
               height='180px'
               src={StorytellingImage}
@@ -71,7 +71,7 @@ const HomePage = () => {
         <div className='home-event-wrapper'>
           <a href='/festivals/international'>
             <img
-              className='rounded shadow'
+              className='rounded'
               width='320px'
               height='180px'
               src={InternationalImage}

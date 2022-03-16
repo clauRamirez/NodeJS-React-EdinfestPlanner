@@ -25,14 +25,14 @@
 
 /* Custom code */
 .about-container {
-  width: 80% !important;
+  width: 80%;
   padding-top: 8vh;
 }
 
 .img-thumbnail {
-  padding: 0 !important;
-  width: 15vw !important;
-  height: 15vw !important;
+  padding: 0;
+  width: 15vw;
+  height: 15vw;
   object-fit: cover;
 }
 
@@ -43,9 +43,8 @@
 }
 
 .about-icons > .stack-icon {
-  /* width: 12vw !important; */
   height: 15vh;
-  max-height: 15vh !important;
+  max-height: 15vh;
 }
 
 .about-text {
