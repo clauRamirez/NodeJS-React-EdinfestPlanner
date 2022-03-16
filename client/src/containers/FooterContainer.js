@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Stack from "react-bootstrap/Stack";
 import SocialMediaIcon from "../components/socialMedia/SocialMediaIcon";
 
-const SocialMediaContainer = () => {
+const FooterContainer = () => {
   const icons = [
     {
       icon: "fa fa-brands fa-facebook-f",
@@ -66,4 +66,4 @@ const SocialMediaContainer = () => {
   );
 };
 
-export default SocialMediaContainer;
+export default FooterContainer;
