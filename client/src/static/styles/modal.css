@@ -1,8 +1,6 @@
 .modal-container {
   overflow: scroll;
   z-index: 10000;
-  /* width: 100vw; */
-  /* height: 100vh; */
   top: 0;
   right: 0;
   bottom: 0;
@@ -16,10 +14,21 @@
   top: 15%;
 }
 
-.modal-footer > a:hover {
-  color: var(--main-color);
+.modal-container .modal-wrapper #modal-title {
+  width: 36px;
+  height: 36px;
+}
+
+.modal-container .modal-wrapper #modal-title > span {
+  font-size: 1.75em;
+  color: grey;
+  cursor: pointer;
 }
 
 .modal-footer > a {
   color: var(--hover-color);
+}
+
+.modal-footer > a:hover {
+  color: var(--main-color);
 }

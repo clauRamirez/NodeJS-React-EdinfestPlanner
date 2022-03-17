@@ -37,19 +37,12 @@ const MainContainer = () => {
   };
 
   return (
-    <main
-      style={{
-        paddingBottom: "8vh",
-        paddingLeft: "8vw",
-        flexGrow: "1",
-        minHeight: "100%",
-      }}
-    >
+    <main id='main-container'>
       <FestivalDataContext.Provider value={{ festivalData, setFestivalData }}>
         <FavouritesDataContext.Provider
           value={{ favouritesData, setFavouritesData }}
         >
-          <Router onEventClick={onEventClick}/>
+          <Router onEventClick={onEventClick} />
         </FavouritesDataContext.Provider>
       </FestivalDataContext.Provider>
     </main>

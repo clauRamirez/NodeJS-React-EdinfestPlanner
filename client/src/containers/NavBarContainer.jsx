@@ -7,12 +7,10 @@ const NavBarContainer = () => {
   const currentPath = useLocation().pathname;
 
   return (
+    // refactor this
     <SideNav
       className=''
       style={{ position: "fixed" }}
-      onSelect={(selected) => {
-        // Add your code here
-      }}
     >
       <SideNav.Toggle />
       <SideNav.Nav defaultSelected={currentPath}>
@@ -103,9 +101,9 @@ const NavBarContainer = () => {
             <Link to='/calendar'>Calendar</Link>
           </NavText>
         </NavItem>
-        <NavItem eventKey='form'>
+        <NavItem eventKey='login'>
           <NavIcon>
-            <Link to='/form'>
+            <Link to='/login'>
               <i
                 className='fa far fa-sign-in nav-icon'
                 style={{ fontSize: "1.75em" }}
@@ -113,7 +111,7 @@ const NavBarContainer = () => {
             </Link>
           </NavIcon>
           <NavText>
-            <Link to='/form'>Login</Link>
+            <Link to='/login'>Login</Link>
           </NavText>
         </NavItem>
         <NavItem eventKey='about'>

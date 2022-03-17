@@ -11,12 +11,16 @@
 .event-wrapper:hover {
   opacity: 0.8;
 }
+
+.event-wrapper > img {
+  width: 320px;
+  height: 180px;
+}
 .event-wrapper-title-container {
   position: absolute;
   width: 100%;
   top: 54%;
   text-align: center;
-  /* opacity: 0.8; */
 }
 .event-wrapper-title {
   display: flex;

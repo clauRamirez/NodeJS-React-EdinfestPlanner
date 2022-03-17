@@ -1,5 +1,6 @@
 .hover-heart > .fa.far.fa-heart {
   text-shadow: 2px 3px 13px rgb(134 94 101);
+  font-size: 1.75em;
 }
 
 .hover-heart.fa.far.fa-heart::after {
@@ -12,4 +13,19 @@
   position: relative;
   top: -85px;
   left: 270px;
+}
+
+.social-media-icon {
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+}
+
+.social-media-icon > a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }

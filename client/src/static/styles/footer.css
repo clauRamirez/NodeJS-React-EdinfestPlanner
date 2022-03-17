@@ -1,13 +1,12 @@
-#social-media-wrapper > div > a > i {
-  color: var(--second-color);
-  font-size: 24px;
-  transition: ease-in-out 0.5s;
+footer > .footer-container {
+    flex-shrink: 0;
+    min-width: 100%;
+    height: max-content;
+    padding: 2vh 0;
 }
 
-#social-media-wrapper > div > a > i:hover {
-  color: var(--icons-color);
-  font-size: 28px;
-  transition: ease-in-out 0.5s;
+#social-media-wrapper {
+  justify-content: center;
 }
 
 #social-media-wrapper > div > a {
@@ -18,6 +17,18 @@
 #social-media-wrapper > div > a:hover {
   background-color: var(--second-color);
   transition: ease-in 0.5s;
+}
+
+#social-media-wrapper > div > a > i {
+  color: var(--second-color);
+  font-size: 24px;
+  transition: ease-in-out 0.5s;
+}
+
+#social-media-wrapper > div > a > i:hover {
+  color: var(--icons-color);
+  font-size: 28px;
+  transition: ease-in-out 0.5s;
 }
 
 .footer-text {

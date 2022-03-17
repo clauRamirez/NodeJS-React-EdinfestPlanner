@@ -7,15 +7,14 @@ import SearchBar from "../components/searchBar/SearchBar";
 
 const FestivalPage = ({ onEventClick }) => {
   const { festivalData, setFestivalData } = useContext(FestivalDataContext);
-  const { favouritesData, setFavouritesData } = useContext(
+  const { favouritesData } = useContext(
     FavouritesDataContext
   );
 
   const [finalFestivalData, setFinalFestivalData] = useState([]);
+  const [search, setSearch] = useState("");
 
   const { festival } = useParams();
-
-  const [search, setSearch] = useState("");
 
   const fetchFestivals = () => {
     fetch(`http://localhost:8080/festivals?id=${festival}`)
@@ -38,13 +37,11 @@ const FestivalPage = ({ onEventClick }) => {
     setFinalFestivalData(
       festivalData.length > 0
         ? festivalData.map((event) => {
-            // instead of checking if it's inside array we check their event codes which are unique
-            // put them inside an array of just the codes
+           // we use object code as unique identifier
             const favouriteEventCodes = favouritesData.map(
               (favouriteEvent) => favouriteEvent.code
             );
 
-            // we check that event.code is inside favourites codes, if match, attach property
             const property = favouriteEventCodes.includes(event.code);
             event.favourited = property;
             return event;

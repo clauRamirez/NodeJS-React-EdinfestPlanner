@@ -4,6 +4,7 @@ const SearchBar = ({ setSearch }) => {
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
+
   return (
     <div className='search-body'>
       {/* Source: https://freefrontend.com/css-search-boxes/ */}

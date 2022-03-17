@@ -1,4 +1,7 @@
-/* please Clau reorganise this */
+/* 
+ * Overriding colours for navbar is a horrible task to do 
+ * I will tidy this up when I get the chance
+ */
 
 .sidenav---sidenav---_2tBP {
   background: var(--second-color) !important;

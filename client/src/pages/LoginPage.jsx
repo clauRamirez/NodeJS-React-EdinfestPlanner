@@ -1,6 +1,7 @@
 import React from "react";
 
 const FormPage = () => {
+  // Source: https://remotestack.io/react-bootstrap-login-register-ui-templates/
   return (
     <div className='outer'>
       <form className='inner'>
