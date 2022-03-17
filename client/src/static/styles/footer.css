@@ -1,3 +1,14 @@
+footer > .footer-container {
+    flex-shrink: 0;
+    min-width: 100%;
+    height: max-content;
+    padding: 2vh 0;
+}
+
+#social-media-wrapper {
+  justify-content: center;
+}
+
 #social-media-wrapper > div > a {
   transition: ease-in 0.5s;
   border-radius: 7.5px;

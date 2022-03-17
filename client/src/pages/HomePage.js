@@ -1,86 +1,58 @@
 import React from "react";
-import ArtImage from "../static/images/art.jpg";
-import BookImage from "../static/images/book.jpg";
-import ImaginationImage from "../static/images/imagination.jpg";
-import JazzImage from "../static/images/jazz.jpg";
-import StorytellingImage from "../static/images/storytelling.jpg";
-import InternationalImage from "../static/images/international.jpg";
+import HomeCard from "../components/cards/HomeCard";
+import artImage from "../static/images/art.jpg";
+import bookImage from "../static/images/book.jpg";
+import imaginationImage from "../static/images/imagination.jpg";
+import jazzImage from "../static/images/jazz.jpg";
+import storytellingImage from "../static/images/storytelling.jpg";
+import internationalImage from "../static/images/international.jpg";
+
+const festivals = [
+  {
+    name: "art",
+    path: "/festivals/art",
+    img: artImage,
+  },
+  {
+    name: "book",
+    path: "/festivals/book",
+    img: bookImage,
+  },
+  {
+    name: "imaginate",
+    path: "/festivals/imaginate",
+    img: imaginationImage,
+  },
+  {
+    name: "jazz",
+    path: "/festivals/jazz",
+    img: jazzImage,
+  },
+  {
+    name: "storytelling",
+    path: "/festivals/storytelling",
+    img: storytellingImage,
+  },
+  {
+    name: "international",
+    path: "/festivals/international",
+    img: internationalImage,
+  },
+];
 
 const HomePage = () => {
+  const festivalNodes = festivals.map((i) => {
+    return <HomeCard key={i.name} festival={i} />;
+  });
+
   return (
-    <main className='home-page-container'>
+    <div className='home-page-container'>
       <h1>Edinfest planner</h1>
+
       <section className='home-page-gallery'>
-        <div className='home-event-wrapper'>
-          <a href='/festivals/art'>
-            <img
-              className='rounded'
-              width='320px'
-              height='180px'
-              src={ArtImage}
-            />
-            <span>ART</span>
-          </a>
-        </div>
-        <div className='home-event-wrapper'>
-          <a href='/festivals/book'>
-            <img
-              className='rounded'
-              width='320px'
-              height='180px'
-              src={BookImage}
-            />
-            <span>BOOK</span>
-          </a>
-        </div>
-        <div className='home-event-wrapper'>
-          <a href='/festivals/imaginate'>
-            <img
-              className='rounded'
-              width='320px'
-              height='180px'
-              src={ImaginationImage}
-            />
-            <span>IMAGINATE</span>
-          </a>
-        </div>
+        {festivalNodes}
       </section>
-      <section className='home-page-gallery'>
-        <div className='home-event-wrapper'>
-          <a href='/festivals/jazz'>
-            <img
-              className='rounded'
-              width='320px'
-              height='180px'
-              src={JazzImage}
-            />
-            <span>JAZZ</span>
-          </a>
-        </div>
-        <div className='home-event-wrapper'>
-          <a href='/festivals/storytelling'>
-            <img
-              className='rounded'
-              width='320px'
-              height='180px'
-              src={StorytellingImage}
-            />
-            <span>STORYTELLING</span>
-          </a>
-        </div>
-        <div className='home-event-wrapper'>
-          <a href='/festivals/international'>
-            <img
-              className='rounded'
-              width='320px'
-              height='180px'
-              src={InternationalImage}
-            />
-            <span>INTERNATIONAL</span>
-          </a>
-        </div>
-      </section>
-    </main>
+    </div>
   );
 };
 

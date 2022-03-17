@@ -48,7 +48,7 @@
 }
 
 .about-text {
-  width: 50% ;
+  width: 50%;
   margin: auto;
 }
 
@@ -62,4 +62,10 @@
 
 .about-text a:hover {
   color: var(--hover-color);
+}
+
+.github-repo-link {
+  padding-top: 5vh;
+  margin-bottom: 0;
+  font-size: 1.5rem;
 }

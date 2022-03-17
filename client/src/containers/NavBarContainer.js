@@ -7,6 +7,7 @@ const NavBarContainer = () => {
   const currentPath = useLocation().pathname;
 
   return (
+    // refactor this
     <SideNav
       className=''
       style={{ position: "fixed" }}

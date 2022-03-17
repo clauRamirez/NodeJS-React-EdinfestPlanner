@@ -3,28 +3,13 @@ import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import {formatDate} from "../../helpers/formatDate.js"
 
 const EventListItemModal = ({
   currentEvent,
   toggleHidden,
   onClickOutsideCloseModal,
 }) => {
-  const formatDate = (start, end) => {
-    // separate event day from event starting time
-    let [day, startTime] = start.split(" ");
-
-    // removes the seconds (from 20:00:00 to 20:00 by removing 3 last indexes which are ":00")
-    startTime = startTime.slice(0, -3);
-
-    // this does the same as with startTime but in one line
-    const endTime = end.split(" ")[1].slice(0, -3);
-
-    return {
-      day: day,
-      start: startTime,
-      end: endTime,
-    };
-  };
 
   const { day, start, end } = formatDate(
     currentEvent.performances[0].start,
@@ -39,10 +24,9 @@ const EventListItemModal = ({
       <Modal.Dialog className='modal-wrapper'>
         <Modal.Header>
           <Modal.Title>{currentEvent.title}</Modal.Title>
-          <div style={{ width: "36px", height: "36px" }}>
+          <div id="modal-title">
             <span
               onClick={() => toggleHidden()}
-              style={{ fontSize: "1.75em", color: "grey", cursor: "pointer" }}
             >
               &#10060;
             </span>

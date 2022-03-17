@@ -19,8 +19,21 @@
 
 /* General */
 
+#document {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 body {
   background-color: snow;
+}
+
+#main-container {
+  padding-bottom: 8vh;
+  padding-left: 8vw;
+  flex-grow: 1;
+  min-height: 100%;
 }
 
 h1,
@@ -42,10 +55,4 @@ h2 {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-/* Bootstrap overrides */
-
-.rounded {
-  border-radius: 0.75rem !important;
 }

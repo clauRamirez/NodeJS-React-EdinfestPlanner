@@ -14,6 +14,17 @@
   top: 15%;
 }
 
+.modal-container .modal-wrapper #modal-title {
+  width: 36px;
+  height: 36px;
+}
+
+.modal-container .modal-wrapper #modal-title > span {
+  font-size: 1.75em;
+  color: grey;
+  cursor: pointer;
+}
+
 .modal-footer > a {
   color: var(--hover-color);
 }
@@ -21,4 +32,3 @@
 .modal-footer > a:hover {
   color: var(--main-color);
 }
-

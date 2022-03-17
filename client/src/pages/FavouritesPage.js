@@ -18,7 +18,6 @@ const FavouritesPage = ({ onEventClick }) => {
     <>
       <h2>Your favourite events</h2>
       <EventList
-        // context={favouritesData ? favouritesData : null}
         context={favouritesData ? favouritesData : null}
         onEventClick={onEventClick}
       />

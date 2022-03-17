@@ -5,6 +5,7 @@ import { allowScroll } from "../../helpers/scrollBehaviours";
 
 const EventList = ({ context, onEventClick, search = null }) => {
   const currentPath = useLocation().pathname;
+  
   let eventListNodes;
 
   if (search === null) {
