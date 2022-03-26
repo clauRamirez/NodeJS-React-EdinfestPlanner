@@ -1,0 +1,4 @@
+# Ignore everything except those required by Dockerfile
+*
+!src/
+!package*.json
