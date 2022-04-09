@@ -1,53 +1,31 @@
 {
-    "name": "api-template",
-    "version": "1.0.0",
-    "private": false,
-    "scripts": {
-        "start": "npm run prod",
-        "build": "npm-run-all clean transpile",
-        "server": "node ./build/bin/www",
-        "dev": "NODE_ENV=development npm-run-all build server",
-        "prod": "NODE_ENV=production npm-run-all build server",
-        "transpile": "babel ./src --out-dir build",
-        "clean": "rimraf build",
-        "dev:watch": "nodemon",
-        "lint": "eslint src"
-    },
-    "dependencies": {
-        "cookie-parser": "~1.4.4",
-        "debug": "~2.6.9",
-        "dotenv": "^14.3.2",
-        "express": "~4.16.1",
-        "morgan": "~1.9.1",
-        "npm-run-all": "^4.1.5"
-    },
-    "devDependencies": {
-        "@babel/cli": "^7.16.8",
-        "@babel/core": "^7.16.12",
-        "@babel/preset-env": "^7.16.11",
-        "eslint": "^8.11.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-import": "^2.25.4",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "nodemon": "^2.0.15",
-        "prettier": "^2.6.1",
-        "rimraf": "^3.0.2"
-    },
-    "babel": {
-        "presets": [
-            "@babel/preset-env"
-        ]
-    },
-    "nodemonConfig": {
-        "verbose": true,
-        "watch": [
-            "src/*"
-        ],
-        "ignore": [
-            "**/__tests__/**",
-            "*.test.js",
-            "*.spec.js"
-        ]
-    }
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint .",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "hmac_sha1": "^0.1.1",
+    "mongodb": "^4.5.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15"
+  }
 }
