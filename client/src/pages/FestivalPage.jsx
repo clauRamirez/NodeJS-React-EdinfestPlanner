@@ -17,7 +17,7 @@ const FestivalPage = ({ onEventClick }) => {
   const { festival } = useParams();
 
   const fetchFestivals = () => {
-    fetch(`http://localhost:8080/festivals?id=${festival}`)
+    fetch(`http://localhost:8080/api/festivals?name=${festival}`)
       .then((response) => response.json())
       .then((data) => setFestivalData(data))
       .catch((e) => console.error(e));
